@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gemeindehaus — Creative Workspace</title>
+        <link rel="icon" type="image/png" href="./images/favicon.png">
+
+        <!-- Riot.js CDN -->
+        <script src="https://cdn.jsdelivr.net/gh/riot/route/dist/route.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link href="main.6b06d42f5ffbb62e7a24.css" rel="stylesheet"></head>
+    <body>
+        <div class="impressum-content">
+                Angaben gemäß § 5 TMG:<br/>
+                Karl Anders GmbH<br/>
+                Brunnenhofstrasse 2<br/>
+                22767 Hamburg
+                <br/>
+                <br/>
+                Vertreten durch:<br/>
+                Claudia Fischer-Appelt, Lars Kreyenhagen
+                <br/>
+                <br/>
+                Kontakt<br/>
+                Telefon: +49 40-209 32 11 99<br/>
+                Telefax: +49 40-209 32 11 11<br/>
+                E-Mail: <a href="mailto:hi@karlanders.io">hi@karlanders.io</a>
+                <br/>
+                <br/>
+                <div class="impressum-fotos">
+                Fotos:<br/>
+                geheimtipphamburg.de<br/>
+                mondaytosunday.de<br/>
+                anderstalleraas.com<br/>
+                karlanders.io
+                </div>
+        </div>
+
+        
+        <div class="header header-subelement">
+
+                <div class="cube-container">
+                        <div class="scene">
+                          <div class="box">
+                            <div class="box__face box__face--front">
+                              <div class="front-image"></div>
+                               <div class="inner__box__face">
+                                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                              </div> 
+                            </div>
+                            <div class="box__face box__face--back">
+                              <!-- <div class="neighbourhood-image"></div>
+                              KIEZ -->
+                              <div class="close-button"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjEgNC4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0LjEgNC4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0VBQUZCOTt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMC41QzAuMiwwLjMsMC4zLDAuMiwwLjUsMEMxLDAuNSwxLjUsMSwyLDEuNUMyLjUsMSwzLDAuNSwzLjUsMEMzLjcsMC4yLDMuOCwwLjMsNCwwLjVDMy41LDEsMywxLjUsMi41LDIKCQlDMywyLjUsMy41LDMsNCwzLjVDMy45LDMuOCwzLjgsMy45LDMuNiw0LjFjLTAuNS0wLjUtMS0xLTEuNS0xLjVjLTAuNSwwLjUtMSwxLTEuNSwxLjVDMC4zLDMuOSwwLjIsMy44LDAsMy42YzAuNS0wLjUsMS0xLDEuNS0xLjUKCQlDMSwxLjUsMC41LDEsMCwwLjV6Ii8+CjwvZz4KPC9zdmc+Cg=="></div>
+                              <div class="map-button-mobile"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIKCSBpZD0iTGF5ZXJfMSIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCgkgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA3MCA3MiIKCSBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MCA3MjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNFQUFGQjk7fQo8L3N0eWxlPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC05NTIuMzYyMTgpIj4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00Ni42LDk1Mi41bDIyLDdjMC44LDAuMywxLjQsMS4xLDEuNCwxLjl2NjFjMCwxLjItMS40LDIuMy0yLjYsMS45bC0yMS40LTYuOGwtMjEuNCw2LjgKCQljLTAuNCwwLjEtMC44LDAuMS0xLjIsMGwtMjItN2MtMC44LTAuMy0xLjQtMS4xLTEuNC0xLjl2LTYxYzAtMS4yLDEuNC0yLjMsMi42LTEuOWwyMS40LDYuOGwyMS40LTYuOAoJCUM0NS44LDk1Mi4zLDQ2LjMsOTUyLjQsNDYuNiw5NTIuNXogTTQ4LDk1Ny4xdjU2LjhsMTgsNS44di01Ni44TDQ4LDk1Ny4xeiBNNDQsOTU3LjFsLTE4LDUuOHY1Ni44bDE4LTUuOFY5NTcuMXogTTQsOTU3LjF2NTYuOAoJCWwxOCw1Ljh2LTU2LjhMNCw5NTcuMXoiLz4KPC9nPgo8L3N2Zz4K" alt=""></div>
+                              <div class="map-container">
+                                  <div class="map-container-left">
+                                      <div class="map-list-title">
+                                          <span>FOOD</span>
+                                          <span><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA3OSA4MCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNzkgODA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojRUFBRkI5O30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTI0LjMsNDguNmMxLjYsMCwzLjEtMC42LDQuMy0xLjhjMi40LTIuNCwyLjQtNi4yLDAtOC42Yy0xLjEtMS4xLTIuNy0xLjgtNC4zLTEuOHMtMy4xLDAuNi00LjMsMS44CgljLTIuNCwyLjQtMi40LDYuMiwwLDguNkMyMS4xLDQ3LjksMjIuNyw0OC42LDI0LjMsNDguNnogTTIxLjQsMzkuNmMwLjgtMC44LDEuOC0xLjIsMi45LTEuMnMyLjEsMC40LDIuOSwxLjJjMS42LDEuNiwxLjYsNC4yLDAsNS43CgljLTAuOCwwLjgtMS44LDEuMi0yLjksMS4ycy0yLjEtMC40LTIuOS0xLjJDMTkuOCw0My44LDE5LjgsNDEuMiwyMS40LDM5LjZ6Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMi4zLDcxLjdjMS4yLDAsMi40LTAuNCwzLjMtMS4zYzAuOS0wLjksMS4zLTIsMS4zLTMuM3MtMC41LTIuNC0xLjMtMy4zYy0xLjgtMS44LTQuNy0xLjgtNi41LDAKCWMtMC45LDAuOS0xLjMsMi0xLjMsMy4zczAuNSwyLjQsMS4zLDMuM0M5LjksNzEuMywxMS4xLDcxLjcsMTIuMyw3MS43eiBNMTAuNCw2NS4zYzAuNS0wLjUsMS4yLTAuOCwxLjgtMC44YzAuNywwLDEuMywwLjMsMS44LDAuOAoJYzAuNSwwLjUsMC44LDEuMSwwLjgsMS44cy0wLjMsMS4zLTAuOCwxLjhjLTEsMS0yLjcsMS0zLjcsMGMtMC41LTAuNS0wLjgtMS4xLTAuOC0xLjhTMTAsNjUuOCwxMC40LDY1LjN6Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00Mi40LDU4LjFjMS4yLDAsMi40LTAuNSwzLjMtMS4zYzEuOC0xLjgsMS44LTQuNywwLTYuNWMtMC45LTAuOS0yLTEuMy0zLjMtMS4zcy0yLjQsMC41LTMuMywxLjMKCWMtMS44LDEuOC0xLjgsNC43LDAsNi41QzQwLDU3LjYsNDEuMSw1OC4xLDQyLjQsNTguMXogTTQwLjUsNTEuNmMwLjUtMC41LDEuMS0wLjgsMS44LTAuOHMxLjMsMC4zLDEuOCwwLjhjMSwxLDEsMi43LDAsMy43CgljLTEsMS0yLjcsMS0zLjcsMEMzOS41LDU0LjMsMzkuNSw1Mi42LDQwLjUsNTEuNnoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTMxLjUsMzQuNGMxLjQsMCwyLjgtMC42LDMuOC0xLjZjMS0xLDEuNi0yLjQsMS42LTMuOHMtMC42LTIuOC0xLjYtMy44Yy0yLjEtMi4xLTUuNS0yLjEtNy42LDBzLTIuMSw1LjUsMCw3LjYKCUMyOC43LDMzLjksMzAuMSwzNC40LDMxLjUsMzQuNHogTTI5LjEsMjYuNmMwLjctMC43LDEuNS0xLDIuNC0xczEuNywwLjMsMi40LDFjMC42LDAuNiwxLDEuNSwxLDIuNHMtMC40LDEuOC0xLDIuNAoJYy0xLjMsMS4zLTMuNSwxLjMtNC44LDBDMjcuOCwzMC4xLDI3LjgsMjcuOSwyOS4xLDI2LjZ6Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0yMy4zLDU0LjdjLTIuMSwyLjEtMi4xLDUuNSwwLDcuNmMxLjEsMS4xLDIuNCwxLjYsMy44LDEuNmMxLjQsMCwyLjgtMC41LDMuOC0xLjZjMS0xLDEuNi0yLjQsMS42LTMuOAoJUzMyLDU1LjcsMzEsNTQuN0MyOC45LDUyLjYsMjUuNCw1Mi42LDIzLjMsNTQuN3ogTTI5LjUsNjAuOWMtMS4zLDEuMy0zLjUsMS4zLTQuOCwwcy0xLjMtMy41LDAtNC44czMuNS0xLjMsNC44LDAKCWMwLjYsMC42LDEsMS41LDEsMi40UzMwLjIsNjAuMiwyOS41LDYwLjl6Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00OS41LDQ2LjhjMS44LDAsMy42LTAuNyw1LTIuMWMyLjctMi43LDIuNy03LjIsMC05LjljLTIuNy0yLjctNy4yLTIuNy05LjksMGMtMi43LDIuNy0yLjcsNy4yLDAsOS45CglDNDUuOSw0Ni4xLDQ3LjcsNDYuOCw0OS41LDQ2Ljh6IE00NiwzNi4yYzEtMSwyLjMtMS41LDMuNi0xLjVjMS4zLDAsMi42LDAuNSwzLjYsMS41YzIsMiwyLDUuMiwwLDcuMWMtMiwyLTUuMiwyLTcuMSwwCglDNDQsNDEuNCw0NCwzOC4yLDQ2LDM2LjJ6Ii8+CjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01LDgwYzAuNywwLDEuMy0wLjEsMS45LTAuNGw3MS40LTI5LjVjMC4zLTAuMSwwLjYtMC41LDAuNi0wLjhjMC0wLjYsMC45LTE0LjUtMTctMzIuNEM0NC4xLTEuMSwzMC4zLDAsMjkuOCwwCgljLTAuNCwwLTAuNywwLjMtMC44LDAuNkwwLjQsNzMuMWMtMC44LDEuOS0wLjMsNCwxLjIsNS40QzIuNSw3OS41LDMuNyw4MCw1LDgweiBNMzAuNSwyYzIuOCwwLDE0LjksMS4xLDMwLjEsMTYuMgoJQzc1LjgsMzMuNCw3Nyw0NS43LDc3LDQ4LjVsLTksMy43Yy0wLjQtMS42LTEuNC0zLjEtMi4zLTQuNWMtMC45LTEuNC0xLjctMi43LTIuMS00Yy0wLjMtMS4zLTAuMy0yLjgtMC4yLTQuNAoJYzAuMS0yLjQsMC4yLTQuOC0xLTYuOGMtMS4xLTItMy4yLTMuMS01LjMtNC4xYy0xLjQtMC43LTIuOS0xLjUtMy45LTIuNWMtMS0xLTEuOC0yLjUtMi41LTMuOWMtMS4xLTItMi4yLTQuMi00LjEtNS4zCgljLTItMS4yLTQuNS0xLjEtNi44LTFjLTEuNiwwLjEtMy4yLDAuMS00LjQtMC4yYy0xLjMtMC40LTIuNi0xLjItNC0yLjFjLTEuNC0wLjktMi44LTEuNy00LjMtMi4yYzAsMC0wLjEsMC0wLjEsMEwzMC41LDJ6CgkgTTIuMiw3My45bDI0LTYwLjljMC4xLDAsMC4yLDAsMC4zLDAuMWMxLjIsMC40LDIuNSwxLjIsMy44LDJjMS41LDAuOSwzLDEuOSw0LjYsMi4zYzEuNiwwLjQsMy4zLDAuMyw1LDAuMwoJYzIuMi0wLjEsNC4yLTAuMiw1LjgsMC43YzEuNSwwLjgsMi40LDIuNiwzLjQsNC41YzAuOCwxLjYsMS43LDMuMiwyLjksNC40czIuOCwyLjEsNC40LDIuOWMxLjksMSwzLjcsMS45LDQuNSwzLjQKCWMwLjksMS41LDAuOCwzLjYsMC43LDUuOGMtMC4xLDEuNy0wLjIsMy41LDAuMyw1YzAuNCwxLjYsMS40LDMuMSwyLjMsNC42YzAuOSwxLjUsMS44LDIuOCwyLjEsNC4ybC02MCwyNC44Yy0xLjQsMC42LTIuNiwwLTMuMy0wLjYKCVMxLjcsNzUuMiwyLjIsNzMuOXoiLz4KPC9zdmc+Cg==" alt=""></span>
+                                      </div>
+                                      <hr/>
+                                      <div class="map-list-grid-1">
+                                              <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Ume no hana</div>
+                                                      <div class="map-list-grid-text">
+                                                          Pho? Ramen! Pho?? RAMEN!! Warum nicht beides! Es gibt niemanden, der hier nicht isst. 
+                                                          Die Schüsseln könnten noch ein wenig größer sein, dann könnte man vielleicht sogar darin baden! 
+                                                          Hmmmmmmmmm!!!!
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Kleine Pause</div>
+                                                      <div class="map-list-grid-text">
+                                                          Nicht einfach ein Imbiss –eine Institution! Wer zwischendurch ne kleine Pause mit Pommes Schranke bei Sabine und Thorsten macht, der macht definitiv alles richtig.
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Fritzis</div>
+                                                      <div class="map-list-grid-text">
+                                                          Fritzis Ziegenkäse Salat ist jetzt schon legendär auf St. Pauli. Das Shortbread natürlich auch. Und dieses Kohlrabi-Schnitzel! Wenn die Küche des Fritzis zur Schule ginge, dann wäre sie ein echter Einserschüler. 
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Simbiosa</div>
+                                                      <div class="map-list-grid-text">
+                                                          „Gather around the table“ lautet das Motto von Fabien und seiner Crew. Die Küche ist inspiriert von den bunten und vielfältigen Aromen Israels. Zwischen Shakshuka und Babaganoush schwelgt man in veganen Köstlichkeiten, und dazu git’s Moi’s Haymaker aus Altona!
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Slim Jims</div>
+                                                      <div class="map-list-grid-text">
+                                                          Bei Salamipizza muss Jim laut lachen. Seine Kreationen des Monats sind nicht nur außergewöhnlich und exotisch, sondern auch perfekt gebacken. Wer selber kreativ werden möchte, vegan lebt oder gerne die Kontrolle behält, der kann sich seine ganz eigene Knusperscheibe belegen. 
+                                                      </div>
+                                                  </div>
+                                      </div>
+                                      <div class="map-list-title">
+                                          <span>DRINKS & CAFÉ</span>
+                                          <span><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA2My4zIDgzLjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYzLjMgODMuMTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNFQUFGQjk7fQo8L3N0eWxlPgo8dGl0bGU+ZEFydGJvYXJkIDEzPC90aXRsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNTMuNiwyMy4xYy0yLjEtMS41LTQuNC0yLjYtNi45LTMuM2wwLjQtNS4zYzAsMCwwLTAuMSwwLTAuMWMwLTAuMSwwLTAuMSwwLTAuMmMwLDAsMC0wLjEsMC0wLjEKCQljMC0wLjEtMC4xLTAuMS0wLjEtMC4ydi0wLjFsMCwwYy0wLjEtMC4xLTAuMS0wLjEtMC4yLTAuMWMwLDAtMC4xLDAtMC4xLDBsMCwwTDMzLDguN1YzLjdjMC0wLjMtMC4yLTAuNi0wLjQtMC44bC00LjgtMi44CgkJYy0wLjMtMC4yLTAuNi0wLjItMC45LDBMMjIuMiwzYy0wLjMsMC4yLTAuNCwwLjUtMC40LDAuOHY0LjlMOC41LDEzLjVIMC45Yy0wLjUsMC0wLjksMC40LTAuOSwwLjljMCwwLjIsMC4xLDAuNCwwLjIsMC41bDUuNyw4LjQKCQlsMi4xLDI3YzAsMCwwLDAuMSwwLDAuMUwzLjUsNzhjLTAuMiwyLjYsMS43LDQuOSw0LjMsNS4xYzAuMSwwLDAuMiwwLDAuNCwwaDM2LjljMi42LDAsNC43LTIuMSw0LjctNC43YzAtMC4xLDAtMC4yLDAtMC40CgkJYzAsMCwwLTAuMSwwLTAuMWwtNS42LTI3LjhMNDYsMjguOWM0LjgsMiw4LjUsNi45LDguNSwxOS4xYzAsMi40LDIsNC40LDQuNCw0LjRzNC40LTIsNC40LTQuNEM2My4zLDM2LjIsNjAsMjcuOCw1My42LDIzLjF6CgkJIE00NS4xLDgxLjNIOC4yYy0xLjYsMC0yLjktMS4zLTIuOS0yLjljMCwwLDAtMC4xLDAtMC4xbDQuNC0yN2gzMi45bDUuNCwyN2MwLjEsMC44LTAuMiwxLjYtMC44LDIuMgoJCUM0Ni43LDgwLjksNDUuOSw4MS4zLDQ1LjEsODEuM3ogTTQyLjUsNDkuM0g5LjdsLTAuNC00LjhoMzMuNkw0Mi41LDQ5LjN6IE00Myw0Mi43SDkuM0g5LjJMNy43LDIyLjljMC0wLjEtMC4xLTAuMy0wLjEtMC40CgkJbC00LjktNy4xaDQyLjZMNDMsNDIuN3ogTTMxLDQuMnYzLjdsLTMuNC0xLjNjLTAuMi0wLjEtMC40LTAuMS0wLjYsMGwtMy40LDEuM1Y0LjJMMjcuMywyTDMxLDQuMnogTTI3LjMsOC41bDEzLjksNS4xSDEzLjYKCQlMMjcuMyw4LjV6IE01OC45LDUwLjVjLTEuNCwwLTIuNS0xLjEtMi41LTIuNWMwLDAsMCwwLDAsMGMwLTEzLjktNS0xOS4xLTEwLjItMjEuMWwwLjQtNS4xYzcsMi4xLDE0LjgsOC4yLDE0LjgsMjYuMQoJCUM2MS40LDQ5LjMsNjAuMyw1MC41LDU4LjksNTAuNUM1OC45LDUwLjUsNTguOSw1MC41LDU4LjksNTAuNXoiLz4KPC9nPgo8L3N2Zz4K" alt=""></span>
+                                      </div>
+                                      <hr/>
+                                      <div class="map-list-grid-2">
+                                              <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Café Rolo</div>
+                                                      <div class="map-list-grid-text">
+                                                          Sagt der Kollege: Bei Rolo gibt’s die besten Natas. Ich sag: So ein Quatsch, die gibt’s doch in natürlich in Portugal! Wir also dahin, „Bom dia,  2 Natas bitte“ ... Mannometer, Recht hatte er! 
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Kraweel</div>
+                                                      <div class="map-list-grid-text">
+                                                          Die vielleicht gemütlichste Versuchung in der Paul-Roosen-Straße. Das Café mit offener Küche lädt zum Frühstücken und Lunchen, zum Kuchen und Café ein. Und im Sommer lacht die Sonne auf das Hummus-Foccacia.
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Kandie Shop</div>
+                                                      <div class="map-list-grid-text">
+                                                          I take you to the Kandie Shop. Selbst Fifty Cent würde große Augen machen in diesem bunten Laden. Wahrscheinlich genösse er eine Kurkumalatte mit Apfelstrudel und säße im Sonnenschein auf einer Bierbank vor dem Café. 
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">törnqvist</div>
+                                                      <div class="map-list-grid-text">
+                                                          Let’s Start with the beginning: Die Essenz allen Seins, oder nicht? Also Kaffee kann wirklich niemand so gut wie Linus. Und es gibt göttliche Kanelbullar mit Kardamom-Topping. 
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">The Walrus Bar</div>
+                                                      <div class="map-list-grid-text">
+                                                          Nur ein Wort: Diebestebarimviertel. 
+                                                      </div>
+                                                  </div>
+                                      </div>
+                                      <div class="map-list-title">
+                                          <span>SHOPPING</span>
+                                          <span><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIKCSBpZD0iTGF5ZXJfMSIgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIiB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIiB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCgkgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA2MiA4NiIKCSBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MiA4NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiNFQUFGQjk7fQo8L3N0eWxlPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC05NTIuMzYyMTgpIj4KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0zMSw5NTIuNGMtNy43LDAtMTQsNi4zLTE0LDE0djEwSDZjLTAuNiwwLTAuOSwwLjQtMSwwLjlsLTUsNjBjLTAuMSwwLjYsMC40LDEuMSwxLDEuMWg2MAoJCWMwLjYsMCwxLjEtMC41LDEtMS4xbC01LTYwYzAtMC41LTAuNS0wLjktMS0wLjlINDV2LTEwQzQ1LDk1OC42LDM4LjcsOTUyLjQsMzEsOTUyLjR6IE0zMSw5NTQuNGM2LjcsMCwxMiw1LjMsMTIsMTJ2MTBIMTl2LTEwCgkJQzE5LDk1OS43LDI0LjMsOTU0LjQsMzEsOTU0LjR6IE02LjksOTc4LjRIMTd2OC4xYy0yLjMsMC41LTQsMi41LTQsNC45YzAsMi43LDIuMyw1LDUsNXM1LTIuMyw1LTVjMC0yLjQtMS43LTQuNC00LTQuOXYtOC4xaDI0CgkJdjguMWMtMi4zLDAuNS00LDIuNS00LDQuOWMwLDIuNywyLjMsNSw1LDVzNS0yLjMsNS01YzAtMi40LTEuNy00LjQtNC00Ljl2LTguMWgxMC4xbDQuOCw1OEgyLjFMNi45LDk3OC40eiBNMTgsOTg4LjQKCQljMS43LDAsMywxLjMsMywzcy0xLjMsMy0zLDNzLTMtMS4zLTMtM0MxNSw5ODkuNywxNi4zLDk4OC40LDE4LDk4OC40eiBNNDQsOTg4LjRjMS43LDAsMywxLjMsMywzcy0xLjMsMy0zLDNjLTEuNywwLTMtMS4zLTMtMwoJCUM0MSw5ODkuNyw0Mi4zLDk4OC40LDQ0LDk4OC40eiIvPgo8L2c+Cjwvc3ZnPgo=" alt=""></span>
+                                      </div>
+                                      <hr/>
+                                      <div class="map-list-grid-3">
+                                              <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Gemüseladen</div>
+                                                      <div class="map-list-grid-text">
+                                                          Esst mehr Obst! Wer gegenüber im Edeka vergessen hat, sich den Korb ordentlich mit Spitzkohl, Orangen und Datteln vollzupacken, der kann hier nochmal nachjustieren, alles immer super frisch, vom besten Obst- und Gemüsehändler weit und breit!
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Edeka</div>
+                                                      <div class="map-list-grid-text">
+                                                          Muss ja auch mal sein, für diverse Dinge des Lebens. Klein aber fein, unser Edeka (wohlgemerkt ein aktiv markt), mit einem prima Bäcker nebendran. Vom Kassenpersonal gibt’s immer ein nettes Wort, hier ist alles entspannt.
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Tabakbörse</div>
+                                                      <div class="map-list-grid-text">
+                                                          Wir cornern im Sommer schon auch öfter mal. Und die Tabakbörse, das ist quasi die Kiez-Vorratskammer, super gelegen direkt beim Grünen Jäger und mit einem Sortiment, da wird einem ganz warm ums Herz!
+                                                      </div>
+                                                  </div>
+                                                  <div class="map-list-grid-item">
+                                                      <div class="map-list-grid-image"></div>
+                                                      <div class="map-list-grid-title">Pick and Weight</div>
+                                                      <div class="map-list-grid-text">
+                                                          So ein Second Hand Shop ist ja ohnehin schon eine Weltidee, in Zeiten von Fast Fashion, und Pick and Weight lässt wirklich keine Wünsche offen! Von Fancy bis Funktionskleidung, über Schuhe und Accessoires, oder einfach nur ein solides Teil für den Alltagsgebrauch – steil!
+                                                      </div>
+                                                  </div>
+                                      </div>
+                                  </div>
+                  
+                                  <div class="map-container-right">
+                                      <div id="map"></div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="box__face box__face--right">
+                              <div class="close-button"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjEgNC4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0LjEgNC4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0VBQUZCOTt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMC41QzAuMiwwLjMsMC4zLDAuMiwwLjUsMEMxLDAuNSwxLjUsMSwyLDEuNUMyLjUsMSwzLDAuNSwzLjUsMEMzLjcsMC4yLDMuOCwwLjMsNCwwLjVDMy41LDEsMywxLjUsMi41LDIKCQlDMywyLjUsMy41LDMsNCwzLjVDMy45LDMuOCwzLjgsMy45LDMuNiw0LjFjLTAuNS0wLjUtMS0xLTEuNS0xLjVjLTAuNSwwLjUtMSwxLTEuNSwxLjVDMC4zLDMuOSwwLjIsMy44LDAsMy42YzAuNS0wLjUsMS0xLDEuNS0xLjUKCQlDMSwxLjUsMC41LDEsMCwwLjV6Ii8+CjwvZz4KPC9zdmc+Cg=="></div>
+                                  <div class="inner-scroll-div">
+                                      <div class="spaces-image">SPACES</div>
+                  
+                                      <div class="space-container">
+                                              <div class="space-container-img-1"></div>
+                                              <div class="space-container-text">
+                                              <div>Gemeindesaal</div>
+                                              <span class="space-container-subtext">
+                                                  Das Herzstück des Gemeindehauses! Auf insgesamt 20 Single Spaces arbeiten Texter, Designer, Regisseure, Fotografen, Strategen, Autoren und Programmierer.
+                                              </span>  
+                                              <div class="contact-button"><a href="mailto:hi@gemeindehaus.work">Workspace anfragen</a></div>
+                                              </div>
+                                      </div>
+                                      <hr/>
+                                      <div class="space-container">
+                                              <div class="space-container-img-2"></div>
+                                              <div class="space-container-text">
+                                              <div>Emporeem</div>
+                                              <span class="space-container-subtext">
+                                                  It’s magic! Alles transparent! 4 Personen können sich hier ganz entspannt gegenseitig von der Arbeit ablenken.
+                                              </span>  
+                                              <div class="contact-button"><a href="mailto:hi@gemeindehaus.work">Workspace anfragen</a></div>                            </div>
+                                          </div>
+                                      <hr/> 
+                                      <div class="space-container">
+                                              <div class="space-container-img-3"></div>
+                                              <div class="space-container-text">
+                                              <div>Pastorat</div>
+                                              <span class="space-container-subtext">
+                                                  Je nach Verwandtschaftsgrad / Sympathie eignet sich das Pastorat im Erdgeschoss für 8-10 Personen. 
+                                              </span>  
+                                              <div class="contact-button"><a href="mailto:hi@gemeindehaus.work">Workspace anfragen</a></div>                            </div>
+                                          </div>
+                                      <hr/>     
+                                      <div class="space-container">
+                                              <div class="space-container-img-4"></div>
+                                              <div class="space-container-text">
+                                              <div>Kanzel</div>
+                                              <span class="space-container-subtext">
+                                                  In unserem Balkonzimmer finden bis zu 6 Personen bequem Platz, ein paar mehr sogar noch auf dem Balkon! Perfekte Anbindung an Küche und Kaffeemaschine.
+                                              </span>  
+                                              <div class="contact-button"><a href="mailto:hi@gemeindehaus.work">Workspace anfragen</a></div>                            </div>
+                                          </div>
+                                      <hr/> 
+                                      <div class="space-container">
+                                              <div class="space-container-img-5"></div>
+                                              <div class="space-container-text">
+                                              <div>Audienz</div>
+                                              <span class="space-container-subtext">
+                                                  Der Konferenzraum mit 8 Sitzplätzen ist für Mieter im Haus kostenlos und kann für Externe gemietet werden. Inklusive Catering, WLAN, Technik und Workshop-materialien.
+                                              </span>  
+                                              <div class="contact-button"><a href="mailto:hi@gemeindehaus.work">Workspace anfragen</a></div>                            </div>
+                                          </div>
+                             
+                                  </div>
+                            </div>
+                            <div class="box__face box__face--left">
+                              <div class="close-button"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjEgNC4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0LjEgNC4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0VBQUZCOTt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMC41QzAuMiwwLjMsMC4zLDAuMiwwLjUsMEMxLDAuNSwxLjUsMSwyLDEuNUMyLjUsMSwzLDAuNSwzLjUsMEMzLjcsMC4yLDMuOCwwLjMsNCwwLjVDMy41LDEsMywxLjUsMi41LDIKCQlDMywyLjUsMy41LDMsNCwzLjVDMy45LDMuOCwzLjgsMy45LDMuNiw0LjFjLTAuNS0wLjUtMS0xLTEuNS0xLjVjLTAuNSwwLjUtMSwxLTEuNSwxLjVDMC4zLDMuOSwwLjIsMy44LDAsMy42YzAuNS0wLjUsMS0xLDEuNS0xLjUKCQlDMSwxLjUsMC41LDEsMCwwLjV6Ii8+CjwvZz4KPC9zdmc+Cg=="></div>
+                                  <div class="inner-scroll-div">
+                                      <div class="prices-image">PREISE</div>
+                                      <div class="info-text">
+                                              Je nach Bedarf findest du im Gemeindehaus sowohl Einzelplätze als auch ganze Büros für Teamcrews. Pro Schreibtisch — all inclusive — berechnen wir im Monat:
+                                      </div>
+                                      <div class="big-money">350€</div>
+                                      <div class="CTA-prices"><a href="mailto:hi@gemeindehaus.work">Jetzt Workspace Anfragen</a></div>
+                                  </div>
+                            </div>
+                            <div class="box__face box__face--top">
+                              <div class="close-button"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjEgNC4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0LjEgNC4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0VBQUZCOTt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMC41QzAuMiwwLjMsMC4zLDAuMiwwLjUsMEMxLDAuNSwxLjUsMSwyLDEuNUMyLjUsMSwzLDAuNSwzLjUsMEMzLjcsMC4yLDMuOCwwLjMsNCwwLjVDMy41LDEsMywxLjUsMi41LDIKCQlDMywyLjUsMy41LDMsNCwzLjVDMy45LDMuOCwzLjgsMy45LDMuNiw0LjFjLTAuNS0wLjUtMS0xLTEuNS0xLjVjLTAuNSwwLjUtMSwxLTEuNSwxLjVDMC4zLDMuOSwwLjIsMy44LDAsMy42YzAuNS0wLjUsMS0xLDEuNS0xLjUKCQlDMSwxLjUsMC41LDEsMCwwLjV6Ii8+CjwvZz4KPC9zdmc+Cg=="></div>
+                                  <div class="inner-scroll-div">
+                                       <div class="info-image">INFO</div>
+                                       <div class="info-text">
+                                       <br/>
+                                       <br/>
+                                       <span class="next-level">NEXT LEVEL OF COWORKING</span>
+                                       <br/>
+                                       <br/>
+                                       Ob kreative Ekstase oder kontemplative Stille, Konzentration oder Zerstreuung, Sekt oder Selters. Im Gemeindehaus tut jeder, was er am besten kann, wofür er brennt, was er liebt. Kreative Künstler sind ebenso willkommen wie kulturelle Kommerzler: Hier kommt jeder rein, der nicht mutterseelenallein zuhause vor sich hin ackern möchte. Oder keine Lust auf sterile Hotelatmosphäre hat. Und das beste: Auf den vielseitigen Workspaces kann man sich einrichten, wie man mag. Sticker und Familienfotos inklusive.Sharing is caring!
+                                       Wir teilen aber wirklich nur FAST alles: WLAN, Kaffee, Drucker, Müsli, Grundwasser, saubere Einfälle und schmutzige Gedanken, Schnapsideen und kongeniale, die lauten und die leisen Momente, außerdem so manche Epiphanie, kein Scheiß. 
+                                       <br/>
+                                       <br/>
+                                       Mit dem Gemeindehaus-Schlüssel gibt es 24/7 Zugang zu Gottes Segen, denn gute Gedanken haben keine Öffnungszeiten. Gebetet wird dafür eher selten. Perish the thought!
+                                       </div>
+                                  </div>
+                            </div>
+                            <div class="box__face box__face--bottom">
+                              <div class="close-button"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjEgNC4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0LjEgNC4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0VBQUZCOTt9Cjwvc3R5bGU+CjxnPgoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTAsMC41QzAuMiwwLjMsMC4zLDAuMiwwLjUsMEMxLDAuNSwxLjUsMSwyLDEuNUMyLjUsMSwzLDAuNSwzLjUsMEMzLjcsMC4yLDMuOCwwLjMsNCwwLjVDMy41LDEsMywxLjUsMi41LDIKCQlDMywyLjUsMy41LDMsNCwzLjVDMy45LDMuOCwzLjgsMy45LDMuNiw0LjFjLTAuNS0wLjUtMS0xLTEuNS0xLjVjLTAuNSwwLjUtMSwxLTEuNSwxLjVDMC4zLDMuOSwwLjIsMy44LDAsMy42YzAuNS0wLjUsMS0xLDEuNS0xLjUKCQlDMSwxLjUsMC41LDEsMCwwLjV6Ii8+CjwvZz4KPC9zdmc+Cg=="></div>
+                                  <div class="inner-scroll-div">
+                                      <div class="calendar-image">Kalender</div>
+                  
+                                      <div class="kalender-container">
+                                      
+                                      </div>                        
+                  
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+        <div class="news-container header-subelement">
+
+            <div class="news-elements">
+
+            <div class="news-element-top-div">
+                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIzLjAuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAxMDAwIDI4MiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTAwMCAyODI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMEY1NDQwO30KPC9zdHlsZT4KPGc+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOTU3LjA1LDI2Ny43MmMyNS45MywwLDM2LjkzLTE0LjY2LDM2LjkzLTM3LjIxdi00MS43MmMwLTE4LjYtNS4zNi0yNy45MS0xOS40NS0zOS43NGwtMTguMDQtMTUuNzkKCQljLTQuNTEtNC4yMy01LjY0LTYuMi01LjY0LTExLjg0di0zNS44YzAtMy4xLDEuMTMtNC41MSwzLjY2LTQuNTFjMi41NCwwLDMuNjYsMS40MSwzLjY2LDQuNTF2NDQuNTRoMzQuMzlWODMuOTMKCQljMC0xNi45MS04LjE3LTI5Ljg4LTMzLjgzLTI5Ljg4aC04LjE3Yy0yNS42NSwwLTM1LjgsMTMuMjUtMzUuOCwzMi43djM3LjIxYzAsMTUuNzksNS4wNywyNy4zNCwxNy4xOSwzNy40OWwxOC4zMiwxNS43OQoJCWM1LjM2LDQuNzksNi4yLDcuNjEsNi4yLDE0LjM4djQwLjg3YzAsMy45NS0xLjQxLDUuOTItMy45NSw1LjkyYy0yLjU0LDAtMy42Ni0xLjk3LTMuNjYtNS42NHYtNTIuNDNoLTM0Ljk1djU0Ljk3CgkJYzAsMjEuNywxMS41NiwzMi40MiwzNC45NSwzMi40Mkg5NTcuMDV6IE04NjUuOTgsMjY4YzI1LjY1LDAsMzcuNDktMTYuMzUsMzcuNDktMzQuNjdWNTYuMDNoLTM2LjM2VjIyOS4xCgkJYzAsMy42Ni0xLjQxLDUuMzYtMy45NSw1LjM2Yy0yLjU0LDAtMy42Ni0xLjY5LTMuNjYtNS4zNlY1Ni4wM2gtMzYuNjR2MTc3LjNjMCwxOC42LDEwLjE1LDM0LjY3LDM3LjQ5LDM0LjY3SDg2NS45OHoKCQkgTTc4MC44MywyNjUuNzRoMzQuNjdMNzk2LjYyLDU2LjAzaC00NS4xbC0xNy40OCwyMDkuNzJoMzAuNzJsMS45Ny0zNy43N2gxMi4xMkw3ODAuODMsMjY1Ljc0eiBNNzc3LjE3LDE5Ny4yNWgtOC40Nmw0LjIzLTc5Ljc3CgkJTDc3Ny4xNywxOTcuMjV6IE02NDcuMiwyNjUuNzRINjgzdi05MS4zM2g3LjYxdjkxLjMzaDM1LjUyVjU2LjAzaC0zNS41MnY4MS40Nkg2ODNWNTYuMDNoLTM1LjhWMjY1Ljc0eiBNNTc1LjU5LDU2LjAzdjIwOS43MgoJCWg2MS4xN3YtMzIuN2gtMjYuMjF2LTYwLjZoMjEuNDJ2LTMzLjI2aC0yMS40MlY4OC4xNmgyNS4zN1Y1Ni4wM0g1NzUuNTl6IE01MjAuODgsODQuNzhoMy4zOGMzLjM4LDAsNC4yMywyLjI2LDQuMjMsNi40OFYyMjkuMQoJCWMwLDQuNzktMC44NSw3LjA1LTQuMjMsNy4wNWgtMy4zOFY4NC43OHogTTQ4NS45MywyNjUuNzRoNTEuNThjMTUuNzksMCwyNy4wNi05LjU4LDI3LjA2LTMxLjg1Vjg2LjE5CgkJYzAtMjIuMjctMTIuMTItMzAuMTYtMjcuNjItMzAuMTZoLTUxLjAyVjI2NS43NHogTTM5NS43MSw1Ni4wM3YyMDkuNzJoMjkuODhsLTAuMjgtMTI1LjcybDE2LjYzLDEyNS43MmgzMi45OFY1Ni4wM2gtMjkuNgoJCWwwLjI4LDExMy42bC0xMy44MS0xMTMuNkgzOTUuNzF6IE0zODQuNjksNTYuMDNoLTM1Ljh2MjA5LjcyaDM1LjhWNTYuMDN6IE0yNzcuMjgsNTYuMDN2MjA5LjcyaDYxLjE3di0zMi43aC0yNi4yMXYtNjAuNmgyMS40MgoJCXYtMzMuMjZoLTIxLjQyVjg4LjE2aDI1LjM3VjU2LjAzSDI3Ny4yOHogTTE3My4yNSwyNjUuNzRoMjkuMzJWMTQ4LjQ4bDEwLjcxLDExNy4yNmgxMi42OGwxMC40My0xMTcuMjZ2MTE3LjI2aDI5Ljg4VjU2LjAzaC0zOS43NAoJCWwtNi4yLDEwMS43NmwtNi4yLTEwMS43NmgtNDAuODdWMjY1Ljc0eiBNMTAxLjYzLDU2LjAzdjIwOS43Mmg2MS4xN3YtMzIuN2gtMjYuMjF2LTYwLjZoMjEuNDJ2LTMzLjI2aC0yMS40MlY4OC4xNmgyNS4zN1Y1Ni4wMwoJCUgxMDEuNjN6IE0zOC43NSwyNjcuNzJjMTIuMTIsMCwxOS40NS03LjYxLDI0LjI0LTE1LjIyYzEuMTMsMi41NCwyLjgyLDEwLjE1LDMuNjYsMTMuMjVoMjMuOTZWMTQyLjI4SDQ5LjQ2djI3LjM0aDcuMzN2NjIuNTgKCQljMCw0LjIzLTEuNjksNi40OC01LjA3LDYuNDhjLTMuMzgsMC01LjA3LTIuMjYtNS4wNy02LjQ4Vjg5LjAxYzAtMy42NiwxLjQxLTUuMzYsMy45NS01LjM2YzMuMzgsMCw0LjIzLDEuOTcsNC4yMyw1LjM2djQ1LjY2CgkJaDM0LjM5Vjg3LjZjMC0xNi45MS04LjE3LTMzLjU0LTM2LjY0LTMzLjU0aC00Ljc5QzE5LjU4LDU0LjA2LDEwLDcwLjk3LDEwLDkwLjQydjE0Mi42M2MwLDE4LjYsOS4wMiwzNC42NywyNy45MSwzNC42N0gzOC43NXoiLz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik01MzUuNzYsMTguMDJ2MjUuNTNINTYzdi01Ljk0aC0xOS4zNXYtNC4xOWgxOC41NlYyNy42aC0xOC41NnYtMy43N2gxOS4wMXYtNS44SDUzNS43NnogTTUxNi43MSw0NAoJCQljMTQuNTgsMCwxNy4xMi03LjE0LDE3LjEyLTEwLjM2di0wLjM4aC04LjQ4Yy0wLjIxLDAuNTgtMS4wMyw0LjUzLTkuMyw0LjUzYy03LjQ1LDAtOS40Ny0zLjk4LTkuNDctN3YtMC40MQoJCQljMC0zLjE5LDEuNzUtNi42Miw5LjQtNi42MmM4LjEsMCw5LjEzLDMuNTcsOS4zMyw0LjI2aDguNDh2LTAuMzhjMC0yLjk5LTIuMy0xMC4wNS0xNy4wOS0xMC4wNWgtMS40MQoJCQljLTE1LjEsMC0xNy4wOSw4LTE3LjA5LDEyLjYzdjFjMCw0LjUzLDIuMywxMi44LDE3LjA5LDEyLjhINTE2LjcxeiBNNDkyLjE0LDQzLjU1aDguNjFMNDg3LjEsMTguMDJoLTEwLjM2bC0xMi45LDI1LjUzaDguMTMKCQkJbDIuMy00LjY3aDE1LjQ4TDQ5Mi4xNCw0My41NXogTTQ4Ni43OSwzMy4xMmgtOS42OGw0LjczLTkuNTdMNDg2Ljc5LDMzLjEyeiBNNDQ1LjYxLDIzLjgyaDExLjAyYzIuNTcsMCwzLjcxLDAuOTYsMy43MSwyLjcxdjAuMQoJCQljMCwxLjc1LTEuMiwyLjY4LTMuNzEsMi42OGgtMTEuMDJWMjMuODJ6IE00NTYuNzYsMzUuMDRjOS4xMywwLDExLjkxLTMuODEsMTEuOTEtOC4zN3YtMC4zNGMwLTQuNjctMi43MS04LjMtMTEuOTEtOC4zaC0xOS4xNQoJCQl2MjUuNTNoOHYtOC41MUg0NTYuNzZ6IE00MjAuOCw0NGMxMi44MywwLDE0Ljk2LTQuMzIsMTQuOTYtOC41NHYtMC40OGMwLTUuMDgtMy44OC03LjQxLTEzLjQ5LTcuNThsLTQuMjktMC4wNwoJCQljLTUuMjItMC4xLTUuOS0xLjEtNS45LTIuMmMwLTEuMSwwLjQ1LTIuMiw2LjYyLTIuMmgwLjU1YzYuNjksMCw3LjIxLDIuMDksNy4zOCwzLjA1aDguM3YtMC4zNGMwLTMuODQtMi43NS04LjA2LTE0LjgyLTguMDYKCQkJaC0yLjM3Yy0xMS42MywwLTEzLjksMy45OC0xMy45LDcuNzl2MC4zMWMwLDMuOTgsMi45Miw3LjIxLDEyLjQ2LDcuNDhsNC4zOSwwLjFjNS45LDAuMTcsNi42OSwxLjEsNi42OSwyLjU3CgkJCWMwLDEuMzctMC43NSwyLjcxLTcuNDgsMi43MWgtMC40OGMtNi41OSwwLTcuNDgtMi41LTcuNTgtNC4wNWgtOC4zNHYwLjM4YzAsMy4zNiwxLjU0LDkuMTMsMTQuOTMsOS4xM0g0MjAuOHogTTM4Mi41MSw0My41NQoJCQlWMzEuNTFsMTMuNDksMTIuMDRoMTAuNDNsLTE1LjM3LTEzLjg2bDE0LjY5LTExLjY3aC0xMC4xNmwtMTMuMDcsMTAuNjRWMTguMDJoLTh2MjUuNTNIMzgyLjUxeiBNMzQ4LjQzLDM0LjQ5aDEwLjQzCgkJCWMzLjk1LDAsNS4zMiwxLjM3LDUuMzIsNC41djIuOTVjMCwwLjkzLDAuMTQsMS4zLDAuMzgsMS42MWg4LjEzdi0wLjE3Yy0wLjI0LTAuNDEtMC40OC0xLjA2LTAuNDgtMy4xMnYtMy43NAoJCQljMC0zLjI5LTIuMjMtNS4xMS00Ljg0LTUuODdjMS42OC0wLjU1LDQuNzQtMS45Miw0Ljc0LTUuNTl2LTAuNDFjMC0zLjY3LTIuNTctNi42Mi0xMS4wOC02LjYyaC0yMC41OXYyNS41M2g4VjM0LjQ5egoJCQkgTTM0OC40MywyMy44MmgxMi4xMWMyLjMzLDAsMy4yMywxLjEzLDMuMjMsMi40N3YwLjAzYzAsMS40MS0wLjkzLDIuNS0zLjIzLDIuNWgtMTIuMTFWMjMuODJ6IE0zMzAuMDQsMzAuOTMKCQkJYzAsMi45NS0xLjc1LDYuODYtMTAuMzMsNi44NmMtOC42NSwwLTEwLjMzLTQuMDEtMTAuMzMtNi45M3YtMC40MWMwLTIuOTIsMS41NC02LjY5LDEwLjMzLTYuNjljOC42NSwwLDEwLjMzLDMuNzcsMTAuMzMsNi42OQoJCQlWMzAuOTN6IE0zMTguOTksMTcuNThjLTE2LjE2LDAtMTcuOTgsOC4wNi0xNy45OCwxMi42M3YxLjAzYzAsNC41LDEuODIsMTIuNzcsMTcuOTgsMTIuNzdoMS40OGMxNi4wOSwwLDE3Ljk1LTguMjcsMTcuOTUtMTIuNzcKCQkJdi0xLjAzYzAtNC41Ni0xLjg5LTEyLjYzLTE3Ljk1LTEyLjYzSDMxOC45OXogTTI3Mi4yMiw0My41NWw1LjgtMTcuMDlsNi4xNCwxNy4wOWg4LjA2bDEwLjMzLTI1LjUzaC03Ljg2bC02LjQ1LDE3LjA1CgkJCWwtNS44My0xNy4wNWgtOC41MWwtNS43LDE3LjU3bC02LjU5LTE3LjU3aC04LjcybDEwLjUsMjUuNTNIMjcyLjIyeiBNMjE1Ljg0LDE4LjAydjI1LjUzaDI3LjI1di01Ljk0aC0xOS4zNXYtNC4xOWgxOC41NlYyNy42CgkJCWgtMTguNTZ2LTMuNzdoMTkuMDF2LTUuOEgyMTUuODR6IE0yMDIuOCw0My41NWwxMi4zNS0yNS41M2gtOC4zbC04LjgyLDE4Ljc3bC05LjQtMTguNzdoLTkuMDZsMTMuMjgsMjUuNTNIMjAyLjh6IE0xNzguODgsMTguMDIKCQkJaC04djI1LjUzaDhWMTguMDJ6IE0xNDkuNzUsNDMuNTVoOC4wNlYyNC4wNmgxMS4wMnYtNi4wNGgtMzAuMDZ2Ni4wNGgxMC45OFY0My41NXogTTEzNS41MSw0My41NWg4LjYxbC0xMy42Ni0yNS41M0gxMjAuMQoJCQlsLTEyLjksMjUuNTNoOC4xM2wyLjMtNC42N2gxNS40OEwxMzUuNTEsNDMuNTV6IE0xMzAuMTYsMzMuMTJoLTkuNjhsNC43NC05LjU3TDEzMC4xNiwzMy4xMnogTTc5Ljk5LDE4LjAydjI1LjUzaDI3LjI1di01Ljk0CgkJCUg4Ny44OHYtNC4xOWgxOC41NlYyNy42SDg3Ljg4di0zLjc3aDE5LjAxdi01LjhINzkuOTl6IE01My45MSwzNC40OWgxMC40M2MzLjk1LDAsNS4zMiwxLjM3LDUuMzIsNC41djIuOTUKCQkJYzAsMC45MywwLjE0LDEuMywwLjM4LDEuNjFoOC4xM3YtMC4xN2MtMC4yNC0wLjQxLTAuNDgtMS4wNi0wLjQ4LTMuMTJ2LTMuNzRjMC0zLjI5LTIuMjMtNS4xMS00Ljg0LTUuODcKCQkJYzEuNjgtMC41NSw0Ljc0LTEuOTIsNC43NC01LjU5di0wLjQxYzAtMy42Ny0yLjU3LTYuNjItMTEuMDgtNi42Mkg0NS45MXYyNS41M2g4VjM0LjQ5eiBNNTMuOTEsMjMuODJoMTIuMTEKCQkJYzIuMzMsMCwzLjIzLDEuMTMsMy4yMywyLjQ3djAuMDNjMCwxLjQxLTAuOTMsMi41LTMuMjMsMi41SDUzLjkxVjIzLjgyeiBNMjYuODcsNDRjMTQuNTgsMCwxNy4xMi03LjE0LDE3LjEyLTEwLjM2di0wLjM4aC04LjQ4CgkJCWMtMC4yMSwwLjU4LTEuMDMsNC41My05LjMsNC41M2MtNy40NSwwLTkuNDctMy45OC05LjQ3LTd2LTAuNDFjMC0zLjE5LDEuNzUtNi42Miw5LjQtNi42MmM4LjEsMCw5LjEzLDMuNTcsOS4zMyw0LjI2aDguNDh2LTAuMzgKCQkJYzAtMi45OS0yLjMtMTAuMDUtMTcuMDktMTAuMDVoLTEuNDFjLTE1LjEsMC0xNy4wOSw4LTE3LjA5LDEyLjYzdjFjMCw0LjUzLDIuMywxMi44LDE3LjA5LDEyLjhIMjYuODd6Ii8+Cgk8L2c+Cgk8cGF0aCBjbGFzcz0ic3QwIiBkPSJNOTc5LjA0LDQzLjE0YzEyLjgzLDAsMTQuOTYtNC4zMiwxNC45Ni04LjU0di0wLjQ4YzAtNS4wOC0zLjg4LTcuNDEtMTMuNDktNy41OGwtNC4yOS0wLjA3CgkJYy01LjIyLTAuMS01LjktMS4xLTUuOS0yLjJzMC40NS0yLjIsNi42Mi0yLjJoMC41NWM2LjY5LDAsNy4yMSwyLjA5LDcuMzgsMy4wNWg4LjN2LTAuMzRjMC0zLjg0LTIuNzUtOC4wNi0xNC44Mi04LjA2aC0yLjM3CgkJYy0xMS42MywwLTEzLjksMy45OC0xMy45LDcuNzl2MC4zMWMwLDMuOTgsMi45Miw3LjIxLDEyLjQ2LDcuNDhsNC4zOSwwLjFjNS45LDAuMTcsNi42OSwxLjEsNi42OSwyLjU3YzAsMS4zNy0wLjc1LDIuNzEtNy40OCwyLjcxCgkJaC0wLjQ4Yy02LjU5LDAtNy40OC0yLjUtNy41OC00LjA1aC04LjM0djAuMzhjMCwzLjM2LDEuNTQsOS4xMywxNC45Myw5LjEzSDk3OS4wNHogTTkzNi45NywzMy42NGgxMC40M2MzLjk1LDAsNS4zMiwxLjM3LDUuMzIsNC41CgkJdjIuOTVjMCwwLjkzLDAuMTQsMS4zLDAuMzgsMS42MWg4LjEzdi0wLjE3Yy0wLjI0LTAuNDEtMC40OC0xLjA2LTAuNDgtMy4xMnYtMy43NGMwLTMuMjktMi4yMy01LjExLTQuODQtNS44NwoJCWMxLjY4LTAuNTUsNC43NC0xLjkyLDQuNzQtNS41OXYtMC40MWMwLTMuNjctMi41Ny02LjYyLTExLjA4LTYuNjJoLTIwLjU5VjQyLjdoOFYzMy42NHogTTkzNi45NywyMi45NmgxMi4xMQoJCWMyLjMzLDAsMy4yMywxLjEzLDMuMjMsMi40N3YwLjAzYzAsMS40MS0wLjkzLDIuNS0zLjIzLDIuNWgtMTIuMTFWMjIuOTZ6IE04OTkuMjYsMTcuMTdWNDIuN2gyNy4yNXYtNS45NGgtMTkuMzV2LTQuMTloMTguNTYKCQl2LTUuODNoLTE4LjU2di0zLjc3aDE5LjAxdi01LjhIODk5LjI2eiBNODcwLjQzLDIzLjIxaDguM2M5LjIsMCwxMC4yNiwzLjk1LDEwLjI2LDYuNTV2MC4yMWMwLDIuNjEtMS4yLDYuNTktMTAuMjYsNi41OWgtOC4zCgkJVjIzLjIxeiBNODYyLjQ0LDQyLjdoMTYuOTVjMTQuOTMsMCwxNy45OC02LjkzLDE3Ljk4LTEyLjQydi0xLjAzYzAtNS43My0zLjIzLTEyLjA4LTE4LjAyLTEyLjA4aC0xNi45MlY0Mi43eiBNODI2LjI3LDE3LjE3VjQyLjcKCQloNy44OVYyNS43OGwxNy4zMywxNi45Mmg3Ljg5VjE3LjE3aC03Ljg5djE2LjA2bC0xNi4zLTE2LjA2SDgyNi4yN3ogTTgxNy4xMSw0Mi43aDguNjFsLTEzLjY2LTI1LjUzSDgwMS43TDc4OC44LDQyLjdoOC4xMwoJCWwyLjMtNC42N2gxNS40OEw4MTcuMTEsNDIuN3ogTTgxMS43NSwzMi4yNmgtOS42OGw0Ljc0LTkuNTdMODExLjc1LDMyLjI2eiBNNzUzLjc2LDE3LjE3VjQyLjdoMjUuNzR2LTYuMzVoLTE3Ljc0VjE3LjE3SDc1My43NnoKCQkgTTcyNy42OCwzMy42NGgxMC40M2MzLjk1LDAsNS4zMiwxLjM3LDUuMzIsNC41djIuOTVjMCwwLjkzLDAuMTQsMS4zLDAuMzgsMS42MWg4LjEzdi0wLjE3Yy0wLjI0LTAuNDEtMC40OC0xLjA2LTAuNDgtMy4xMnYtMy43NAoJCWMwLTMuMjktMi4yMy01LjExLTQuODQtNS44N2MxLjY4LTAuNTUsNC43NC0xLjkyLDQuNzQtNS41OXYtMC40MWMwLTMuNjctMi41Ny02LjYyLTExLjA4LTYuNjJoLTIwLjU5VjQyLjdoOFYzMy42NHogTTcyNy42OCwyMi45NgoJCWgxMi4xMWMyLjMzLDAsMy4yMywxLjEzLDMuMjMsMi40N3YwLjAzYzAsMS40MS0wLjkzLDIuNS0zLjIzLDIuNWgtMTIuMTFWMjIuOTZ6IE03MTAuNTMsNDIuN2g4LjYxbC0xMy42Ni0yNS41M2gtMTAuMzYKCQlsLTEyLjksMjUuNTNoOC4xM2wyLjMtNC42N2gxNS40OEw3MTAuNTMsNDIuN3ogTTcwNS4xNywzMi4yNmgtOS42OGw0Ljc0LTkuNTdMNzA1LjE3LDMyLjI2eiBNNjU5Ljg0LDQyLjdWMzAuNjVsMTMuNDksMTIuMDRoMTAuNDMKCQlsLTE1LjM3LTEzLjg2bDE0LjY5LTExLjY3aC0xMC4xNkw2NTkuODQsMjcuOFYxNy4xN2gtOFY0Mi43SDY1OS44NHogTTYyMC41Miw0Mi43aDh2LTkuODhsMTMuMjgtMTUuNjVoLTkuMDJsLTguMDYsOS40bC03LjkzLTkuNAoJCWgtOS45MmwxMy42NiwxNS42NVY0Mi43eiBNNTk4LjQ5LDMyLjEzYzIuNjQsMCwzLjE2LDEuMjcsMy4xNiwyLjM3djAuMTRjMCwxLjAzLTAuNTEsMi41LTMuMTYsMi41aC0xMy4xOHYtNS4wMUg1OTguNDl6CgkJIE01OTcuOCwyMi41NWMyLjIzLDAsMi43OCwwLjk2LDIuNzgsMi4wMnYwLjA3YzAsMS4wMy0wLjU1LDIuMDYtMi43OCwyLjA2aC0xMi40OXYtNC4xNUg1OTcuOHogTTU3Ny4zMiw0Mi43aDIyLjA2CgkJYzguMjcsMCwxMC41Ny0zLjMzLDEwLjU3LTcuMzR2LTAuNDhjMC00LjUtMy43NC01Ljk3LTUuNDktNi40MmMxLjI0LTAuMzgsNC4wNS0xLjY1LDQuMDUtNC45OFYyM2MwLTMuMDItMi4wMi01LjgzLTkuMzMtNS44MwoJCWgtMjEuODZWNDIuN3oiLz4KPC9nPgo8L3N2Zz4K" alt="">
+            </div>
+
+            <div class="news-element">
+                <span>AFTERWORK</span><span class="news-element-flex"><span>01/03/19</span><span>#NETWORKING</span></span>
+             </div>
+             <hr/>
+             <div class="news-element">
+                 <span>MASTERCLASS</span><span class="news-element-flex"><span>01/03/19</span><span>#EDUCATION</span></span>
+             </div>
+             <hr/>
+             <div class="news-element">
+                 <span>JAM SESSION</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+             </div>
+             <hr/>
+             <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+             </div>
+             <hr/>
+             <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+             </div>
+             <hr/>
+             <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+             </div>
+             <hr/>
+             <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>
+              <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>
+              <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>
+              <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>
+              <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>
+              <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>            <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>            <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>            <div class="news-element">
+                 <span>LIVE MUSIC</span><span class="news-element-flex"><span>01/03/19</span><span>#MUSIC</span></span>
+              </div>
+              <hr/>
+        </div>
+
+        <div class="socials header-subelement">
+                <label>
+                    <a href="https://www.instagram.com/gemeindehaus.work/" target="_blank">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMEY1NDQwO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTEyLDIuMmMzLjIsMCwzLjYsMCw0LjksMC4xYzMuMywwLjEsNC44LDEuNyw0LjksNC45YzAuMSwxLjMsMC4xLDEuNiwwLjEsNC44YzAsMy4yLDAsMy42LTAuMSw0LjgKCWMtMC4xLDMuMi0xLjcsNC44LTQuOSw0LjljLTEuMywwLjEtMS42LDAuMS00LjksMC4xYy0zLjIsMC0zLjYsMC00LjgtMC4xYy0zLjMtMC4xLTQuOC0xLjctNC45LTQuOWMtMC4xLTEuMy0wLjEtMS42LTAuMS00LjgKCWMwLTMuMiwwLTMuNiwwLjEtNC44YzAuMS0zLjIsMS43LTQuOCw0LjktNC45QzguNCwyLjIsOC44LDIuMiwxMiwyLjJ6IE0xMiwwQzguNywwLDguMywwLDcuMSwwLjFjLTQuNCwwLjItNi44LDIuNi03LDcKCUMwLDguMywwLDguNywwLDEyczAsMy43LDAuMSw0LjljMC4yLDQuNCwyLjYsNi44LDcsN0M4LjMsMjQsOC43LDI0LDEyLDI0czMuNywwLDQuOS0wLjFjNC40LTAuMiw2LjgtMi42LDctN0MyNCwxNS43LDI0LDE1LjMsMjQsMTIKCXMwLTMuNy0wLjEtNC45Yy0wLjItNC40LTIuNi02LjgtNy03QzE1LjcsMCwxNS4zLDAsMTIsMHogTTEyLDUuOGMtMy40LDAtNi4yLDIuOC02LjIsNi4yczIuOCw2LjIsNi4yLDYuMnM2LjItMi44LDYuMi02LjIKCUMxOC4yLDguNiwxNS40LDUuOCwxMiw1Ljh6IE0xMiwxNmMtMi4yLDAtNC0xLjgtNC00YzAtMi4yLDEuOC00LDQtNHM0LDEuOCw0LDRDMTYsMTQuMiwxNC4yLDE2LDEyLDE2eiBNMTguNCw0LjIKCWMtMC44LDAtMS40LDAuNi0xLjQsMS40UzE3LjYsNywxOC40LDdjMC44LDAsMS40LTAuNiwxLjQtMS40UzE5LjIsNC4yLDE4LjQsNC4yeiIvPgo8L3N2Zz4K" alt="">
+                    </a>
+                </label>
+                <label>
+                    <a href="https://www.facebook.com/gemeindehaus.work/" target="_blank">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjQgMjQ7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCS5zdDB7ZmlsbDojMEY1NDQwO30KPC9zdHlsZT4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTIyLjcsMEgxLjNDMC42LDAsMCwwLjYsMCwxLjN2MjEuNEMwLDIzLjQsMC42LDI0LDEuMywyNGgxMS41di05LjNIOS43di0zLjZoMy4xVjguNGMwLTMuMSwxLjktNC44LDQuNy00LjgKCWMxLjMsMCwyLjUsMC4xLDIuOCwwLjFWN2wtMS45LDBjLTEuNSwwLTEuOCwwLjctMS44LDEuOHYyLjNoMy42bC0wLjUsMy42aC0zLjFWMjRoNi4xYzAuNywwLDEuMy0wLjYsMS4zLTEuM1YxLjMKCUMyNCwwLjYsMjMuNCwwLDIyLjcsMHoiLz4KPC9zdmc+Cg==" alt="">
+                    </a>
+                </label>
+                <label>
+                    <a href="mailto:hi@gemeindehaus.work">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA3MyA1Ni4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA3MyA1Ni4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6IzBGNTQ0MDt9Cjwvc3R5bGU+CjxnPgoJPGc+CgkJPGc+CgkJCTxnPgoJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTcxLDU2LjFIMmMtMS4xLDAtMi0wLjktMi0yVjJjMC0xLjEsMC45LTIsMi0yaDY5YzEuMSwwLDIsMC45LDIsMnY1Mi4xQzczLDU1LjIsNzIuMSw1Ni4xLDcxLDU2LjF6CgkJCQkJIE00LDUyLjFoNjVWNEg0VjUyLjF6Ii8+CgkJCTwvZz4KCQk8L2c+CgkJPGc+CgkJCTxnPgoJCQkJPHBhdGggY2xhc3M9InN0MCIgZD0iTTM2LjUsMzcuMWMtMC41LDAtMS0wLjItMS40LTAuNkwwLjYsMy40QzAsMi45LTAuMiwyLDAuMSwxLjNDMC40LDAuNSwxLjIsMCwyLDBoNjljMC44LDAsMS42LDAuNSwxLjksMS4zCgkJCQkJQzczLjIsMiw3MywyLjksNzIuNCwzLjRMMzcuOSwzNi42QzM3LjUsMzcsMzcsMzcuMSwzNi41LDM3LjF6IE03LDRsMjkuNSwyOC40TDY2LDRIN3oiLz4KCQkJPC9nPgoJCTwvZz4KCTwvZz4KPC9nPgo8L3N2Zz4K" alt="">
+                    </a>
+                </label>
+            </div>
+            <div class="radio-group header-subelement">
+                    <div>
+                        <!-- <label>
+                            <input type="radio" name="rotate-cube-side" value="front" checked /> Impressum
+                        </label> -->
+                        <label>
+                            <input type="radio" name="rotate-cube-side" value="right" /> Spaces
+                        </label>
+                        <label>
+                            <input type="radio" name="rotate-cube-side" value="back" /> St.Pauli
+                        </label>
+                        <label>
+                            <input type="radio" name="rotate-cube-side" value="left" /> Preise
+                        </label>
+                        <label>
+                            <input type="radio" name="rotate-cube-side" value="top" /> Info
+                        </label>
+                        <label>
+                            <input type="radio" name="rotate-cube-side" value="bottom" /> Kalender
+                        </label>
+                    </div>
+                </div> 
+                
+        <div class="overlay"></div>  
+    </div>
+    
+
+        
+        <div class="news-loaded-container header-subelement">
+            <div class="news-loaded-content-top-container-background">
+            <div class="back-button">
+                zurück
+            </div>
+            <div class="news-loaded-content-top-container">
+                <div class="news-loaded-content-top-container-content loaded-subelement">
+                    <span class="news-loaded-content-top-container-title">AFTERWORK</span>
+                    <span class="news-loaded-content-top-container-date">01/03/19</span>
+                    <span class="news-loaded-content-top-container-tag">#NETWORKING</span>
+                    <span class="news-loaded-content-top-container-share">
+                        <a target="_blank" href="">
+                            <img src="./link.svg" alt="">
+                        </a>
+                    </span>
+                </div>
+                <hr/>
+            </div>
+            </div>
+            <div class="news-loaded-content-container">
+            <div class="news-loaded-content">
+                  <div class="news-loaded-content-images loaded-subelement">
+                      <img src="" alt="">
+                    </div>
+                    <div class="news-loaded-content-text loaded-subelement">
+                      <p>
+                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                            <br/>
+                            <br/>
+                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                            <br/>
+                            <br/>
+                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                            <br/>
+                            <br/>
+                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                            <br/>
+                            <br/>
+                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                            <br/>
+                            <br/>
+                            Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+
+                        </p>
+                    </div>
+                  </div>
+                  </div>
+            </div>
+        </div>
+
+	<script type="text/javascript" src="main.js"></script></body>
+</html>
